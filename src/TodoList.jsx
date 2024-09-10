@@ -5,7 +5,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
 
 function TodoList() {
-  const [todo, setTodo] = useState({ desc: "", date: "" });
+  const [todo, setTodo] = useState({ desc: "", date: "", priority: "" });
   const [todolist, setTodolist] = useState([]);
   const gridRef = useRef();
 
@@ -26,7 +26,7 @@ function TodoList() {
   };
 
   const addTodo = () => {
-    if (todo.desc == "" || todo.date == "" || todo.desc == "") {
+    if (todo.desc == "" || todo.date == "" || todo.priority == "") {
       alert("The field(s) is empty!!!");
     } else {
       setTodolist([...todolist, todo]);
